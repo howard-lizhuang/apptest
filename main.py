@@ -5,7 +5,7 @@ def show_message():
 
 # 创建主窗口
 root = tk.Tk()
-root.title("Hello App")
+root.title("Hello App1")
 
 # 创建标签
 label = tk.Label(root, text="")
