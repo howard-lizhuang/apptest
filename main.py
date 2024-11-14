@@ -12,7 +12,7 @@ label = tk.Label(root, text="")
 label.pack(pady=20)
 
 # 创建按钮
-button = tk.Button(root, text="点击我", command=show_message)
+button = tk.Button(root, text="点击我1", command=show_message)
 button.pack(pady=10)
 
 # 运行主循环
