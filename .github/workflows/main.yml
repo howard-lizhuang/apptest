@@ -2,8 +2,7 @@ name: Build Windows Application Package
 
 on:
   push:
-    branches:
-      - main  # 根据实际情况修改为你希望触发构建的分支
+    branches: ['master']
 
 jobs:
   build_windows:
