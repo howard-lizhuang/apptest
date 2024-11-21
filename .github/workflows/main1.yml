@@ -26,4 +26,4 @@ jobs:
       shell: bash
       run: |
         cd ${{ github.workspace }}
-        x86_64-w64-mingw32-gcc your_source_file.c -o your_executable.exe
+        x86_64-w64-mingw32-gcc main.c -o your_executable.exe
