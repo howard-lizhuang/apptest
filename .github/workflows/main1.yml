@@ -1,0 +1,29 @@
+name: Build Windows Executable
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build_windows:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install mingw-w64
+      uses: msys2/setup-msys2@v2
+      with:
+        msystem: MINGW64
+        update: true
+        install: mingw-w64-x86_64-gcc
+
+    - name: Build the executable
+      shell: bash
+      run: |
+        cd ${{ github.workspace }}
+        x86_64-w64-mingw32-gcc your_source_file.c -o your_executable.exe
