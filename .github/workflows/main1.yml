@@ -24,3 +24,10 @@ jobs:
       shell: bash
       run: 
         x86_64-w64-mingw32-gcc main.c -o your_executable.exe
+
+
+    - name: Archive artifacts
+      uses: actions/upload-artifact@v3  # 将构建好的包上传为GitHub Action的工件
+      with:
+        name: windows_application_package
+        path: dist/  # 假设pyinstaller构建的可执行文件在dist目录下，根据实际情况修改路径
