@@ -22,6 +22,5 @@ jobs:
 
     - name: Build the executable
       shell: bash
-      run: |
-        cd ${{ github.workspace }}
+      run: 
         x86_64-w64-mingw32-gcc main.c -o your_executable.exe
